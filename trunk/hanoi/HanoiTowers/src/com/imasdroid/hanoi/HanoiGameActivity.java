@@ -1,4 +1,4 @@
-package com.imasdroid.game.hanoi;
+package com.imasdroid.hanoi;
 
 import android.app.Activity;
 import android.os.Bundle;
