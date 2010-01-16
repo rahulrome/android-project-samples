@@ -97,11 +97,11 @@ public class HanoiGameView extends View {
 
 		// some numbers to understand the translations
 		// first rod located at: x = 90px
-		// first disk located at: y = 191px
+		// first disk located at: y = 230px
 		// distance between rods: x = 150px
 		// distance between disks: y -= 25px
 
-		canvas.translate(90, 191);
+		canvas.translate(90, 230);
 		canvas.save();
 		for (HanoiDiskShape disk : leftRod) {
 
@@ -146,8 +146,8 @@ public class HanoiGameView extends View {
 
 		// limits to detect which rod has been touched
 
-		int topLimit = 20;
-		int bottomLimit = 460;
+		int topLimit = 30;
+		int bottomLimit = 250;
 
 		int leftLimitLeftRod = 20;
 		int rightLimitLeftRod = leftLimitLeftRod + 150;
@@ -192,7 +192,8 @@ public class HanoiGameView extends View {
 
 			touchedRod.lastElement().select();
 			rodWithDiskSelected = touchedRod;
-		} else {
+		} 
+		else if (rodWithDiskSelected != null) {
 
 			// there is a rod with a disk selected, so...
 
@@ -214,8 +215,7 @@ public class HanoiGameView extends View {
 		}
 
 		// if all disks are in the middle or right rod, game finished!
-		if (middleRod.size() == numberOfDisks
-				|| rightRod.size() == numberOfDisks) {
+		if (middleRod.size() == numberOfDisks || rightRod.size() == numberOfDisks) {
 
 			gameFinished = true;
 		}
