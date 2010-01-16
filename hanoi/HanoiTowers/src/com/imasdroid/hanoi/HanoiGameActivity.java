@@ -3,6 +3,8 @@ package com.imasdroid.hanoi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 public class HanoiGameActivity extends Activity {
@@ -19,6 +21,12 @@ public class HanoiGameActivity extends Activity {
 		// initialize Hanoi Game
 		hanoiGame = new HanoiGameView(this, DEFAULT_NUMBER_OF_DISKS);
 
+		// Hide the window title and top bar
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); 
+		
 		setContentView(hanoiGame);
 	}
 
