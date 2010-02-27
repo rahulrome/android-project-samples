@@ -32,9 +32,9 @@ public class HanoiGameView extends View {
 	/** the three rods that form the towers of hanoi game */
 	private Stack<HanoiDiskShape> leftRod, middleRod, rightRod;
 
-	// //////////////////////////
+	////////////////////////////
 	// static disk properties //
-	// //////////////////////////
+	////////////////////////////
 
 	// creates a rounded rectangle by the top side
 	private static float[] diskOuterRadius = new float[] { 12, 12, 12, 12, 0,
